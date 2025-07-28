@@ -54,7 +54,7 @@ if not st.session_state.get("autenticado"):
     if st.button("Entrar"):
         if senha == SENHA_ACESSO:
             st.session_state.autenticado = True
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Senha incorreta")
     st.stop()
